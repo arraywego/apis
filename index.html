@@ -27,9 +27,15 @@
                    var image = response.cards[0].image;
                    var card = response.cards[0].value;
                    var suit = response.cards[0].suit;
+                    var rems = response.cards[0].remaining;
                     
                     $('#chosencard').prop('src', image);
                     $('#cardvalue').html(card + ' of ' +suit);
+                    if(rems == 1){
+                       $.getJSON('https://deckofcardsapi.com/api/deck/74oslp7kisx0/shuffle/', function(data){
+                        console.log(data);
+                       });
+                    }
                 });
     });
 
