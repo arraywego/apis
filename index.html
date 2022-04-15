@@ -19,18 +19,7 @@
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
        <script>
-            /*$( "#deck" ).click(function() {
-                
-                $.getJSON('/cards', function(response){
-                   
-                   var image = response.cards[0].image;
-                   var card = response.cards[0].value;
-                   var suit = response.cards[0].suit;
-                    console.log(response);
-                    $('#chosencard').prop('src', image);
-                    $('#cardvalue').html(card+ ' of ' +suit);
-                });
-    });*/
+           
     $( "#deck" ).click(function() {
                 
                 $.getJSON('https://deckofcardsapi.com/api/deck/74oslp7kisx0/draw/?count=1', function(response){
@@ -40,7 +29,7 @@
                    var suit = response.cards[0].suit;
                     console.log(response);
                     $('#chosencard').prop('src', image);
-                    $('#cardvalue').html(card+ ' of ' +suit);
+                    $('#cardvalue').html(card + ' of ' +suit);
                 });
     });
         </script>
