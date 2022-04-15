@@ -27,7 +27,7 @@
                    var image = response.cards[0].image;
                    var card = response.cards[0].value;
                    var suit = response.cards[0].suit;
-                    var rems = response.cards[0].remaining;
+                    var rems = response.remaining;
                     
                     $('#chosencard').prop('src', image);
                     $('#cardvalue').html(card + ' of ' +suit);
