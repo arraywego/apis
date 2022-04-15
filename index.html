@@ -23,11 +23,11 @@
     $( "#deck" ).click(function() {
                 
                 $.getJSON('https://deckofcardsapi.com/api/deck/74oslp7kisx0/draw/?count=1', function(response){
-                   
+                    console.log(response);
                    var image = response.cards[0].image;
                    var card = response.cards[0].value;
                    var suit = response.cards[0].suit;
-                    console.log(response);
+                    
                     $('#chosencard').prop('src', image);
                     $('#cardvalue').html(card + ' of ' +suit);
                 });
