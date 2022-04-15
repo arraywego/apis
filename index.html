@@ -22,7 +22,7 @@
            
     $( "#deck" ).click(function() {
                 
-                $.getJSON('https://deckofcardsapi.com/api/deck/74oslp7kisx0/draw/?count=1', function(response){
+                $.getJSON('/cards', function(response){
                     console.log(response);
                    var image = response.cards[0].image;
                    var card = response.cards[0].value;
