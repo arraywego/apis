@@ -21,8 +21,8 @@
        <script>
            
     $( "#deck" ).click(function() {
-                
-                $.getJSON('/cards', function(response){
+             
+                $.getJSON('https://deckofcardsapi.com/api/deck/74oslp7kisx0/draw/?count=1', function(response){
                     console.log(response);
                    var image = response.cards[0].image;
                    var card = response.cards[0].value;
@@ -32,6 +32,7 @@
                     $('#cardvalue').html(card + ' of ' +suit);
                 });
     });
+
         </script>
     </body>
 </html>
